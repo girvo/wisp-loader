@@ -1,9 +1,15 @@
 # wisp loader for webpack
-Allows for compilation and requiring of [wisp]() files via webpack
+Allows for compilation and requiring of [wisp](https://github.com/Gozala/wisp) files via webpack
 
 ## Usage
 
 [Documentation: Using loaders](http://webpack.github.io/docs/using-loaders.html)
+
+Install the loader for your project
+
+```sh
+npm install -D wisp-loader
+```
 
 Require a wisp file in your Javascript code.
 

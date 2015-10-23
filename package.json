@@ -17,5 +17,9 @@
   "license": "MIT",
   "devDependencies": {
     "wisp": "^0.10.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/girvo/wisp-loader"
   }
 }

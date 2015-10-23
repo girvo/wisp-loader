@@ -14,5 +14,8 @@
     "lisp"
   ],
   "author": "Josh Girvin <josh@jgirvin.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "wisp": "^0.10.0"
+  }
 }

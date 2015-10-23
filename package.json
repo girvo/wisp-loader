@@ -1,6 +1,6 @@
 {
   "name": "wisp-loader",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A webpack loader for the wisp language",
   "main": "index.js",
   "scripts": {

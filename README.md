@@ -20,7 +20,23 @@ var ex = require('./example.wisp');
 ### Example webpack config
 
 ```javascript
-
+module.exports = {
+    entry: './src/index.wisp',
+    
+    output: {
+        path: __dirname,
+        filename: 'bundle.js'
+    },
+    
+    module: {
+        loaders: [
+            {
+                test: /\.wisp$/,
+                loader: 'wisp-loader'
+            }
+        ]
+    },
+};
 ```
 
 ## Caveats

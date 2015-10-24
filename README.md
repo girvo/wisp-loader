@@ -72,6 +72,20 @@ var example_two = require('./two.wisp');
 
 > ### WARNING: This means you cannot load local Javascript modules from within a wisp file!
 
+# Changelog
+
+# 0.1.2
+- Moved `wisp` dependency to a proper _peerDependencies_ block
+- Performance tested vs `transform-loader` with `wispify`, basically identical in compilation time with a micro-benchmark
+
+# 0.1.1
+- Fixed up the npm publish
+- Tested more of the loader
+
+# 0.1.0
+- Initial release, stuffed up the npm publish
+
+
 # License
 
 MIT

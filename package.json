@@ -1,6 +1,6 @@
 {
   "name": "wisp-loader",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "A webpack loader for the wisp language",
   "main": "index.js",
   "scripts": {
@@ -15,7 +15,7 @@
   ],
   "author": "Josh Girvin <josh@jgirvin.com>",
   "license": "MIT",
-  "devDependencies": {
+  "peerDependencies": {
     "wisp": "^0.10.0"
   },
   "repository": {

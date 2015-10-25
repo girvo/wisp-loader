@@ -11,7 +11,7 @@ Install the loader for your project
 npm install -D wisp-loader
 ```
 
-Require a wisp file in your Javascript code.
+Require a wisp file in your Javascript code, or set a wisp file as your `entry` in your webpack config.
 
 ```javascript
 var ex = require('./example.wisp');
@@ -39,40 +39,12 @@ module.exports = {
 };
 ```
 
-## Caveats
-
-This loader munges the `require()` calls for **local** modules to force their paths to end in `.wisp`. This is done so that the `:require` calls in a wisp file will load the wisp counterpart. By default, wisp converts it to a regular Javascript `require()` call.
-
-### Original behaviour
-
-```clojure
-; ./one.wisp
-(:ns example.one
-  "an entry point"
-  (:require [example.two]))
-```
-
-```javascript
-// compiled result
-
-// ...
-
-var example_two = require('./two');
-```
-
-### Loader behaviour
-
-```javascript
-// compiled result
-
-// ...
-
-var example_two = require('./two.wisp');
-```
-
-> ### WARNING: This means you cannot load local Javascript modules from within a wisp file!
-
 # Changelog
+
+# 0.1.3
+- Removed unneeded string munging of `require()` calls
+- Pushes `'.wisp'` onto the `resolve.extensions` array to enable `require()` calls to work correctly
+- Added proper error handling, so failed compilations don't crash the `webpack-dev-server`
 
 # 0.1.2
 - Moved `wisp` dependency to a proper _peerDependencies_ block
@@ -84,7 +56,6 @@ var example_two = require('./two.wisp');
 
 # 0.1.0
 - Initial release, stuffed up the npm publish
-
 
 # License
 

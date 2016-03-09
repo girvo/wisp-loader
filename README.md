@@ -22,12 +22,12 @@ var ex = require('./example.wisp');
 ```javascript
 module.exports = {
     entry: './src/index.wisp',
-    
+
     output: {
         path: __dirname,
         filename: 'bundle.js'
     },
-    
+
     module: {
         loaders: [
             {
@@ -40,6 +40,9 @@ module.exports = {
 ```
 
 # Changelog
+
+# 0.2.0
+- Merged PR #1 from @thatismatt, which passes through webpack query strings/objects through to the wisp compiler
 
 # 0.1.3
 - Removed unneeded string munging of `require()` calls
